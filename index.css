@@ -1,0 +1,296 @@
+
+@import './reset.css';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Sans KR";
+}
+
+.header-wrap {
+  height: 100px;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.header-left-wrap {
+  display: flex;
+  gap: 50px;
+  width:100%;
+}
+
+.header-logo {
+  font-weight: bold;
+  font-size: 28px;
+  color:#eb2913;
+}
+.header-logo .logo-els {
+  color: #000;
+}
+.header-left-wrap ul {
+  display: flex;
+  width:80%;
+  /* border:1px solid red; */
+}
+
+.header-left-wrap a {width:30%;} 
+
+
+.header-left-wrap li {
+  margin-right: 14px;
+  padding: 8px;
+  width:33.33%;
+  text-align: center;
+}
+
+.header-right-wrap {
+  display: none;
+}
+
+.header-nav-item {
+  color: #000;
+  font-weight: bold;
+}
+
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+
+}
+
+.movies-container {
+  max-width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 50px;
+}
+
+.movie_container {
+  width: 250px;
+  height: 400px;
+  background-color: #EBAE13;
+  color: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.movie_container img {
+  max-width: 100%;
+  height: 80%;
+}
+
+.movie-info {
+  height: 20%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.movie-info h4 {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.movie-info span {
+  font-weight: bold;
+}
+.box {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.error .not {
+  font-size: 32px;
+  font-weight: bold;
+}
+.error .number {
+  font-size: 200px;
+  font-weight: bold;
+  letter-spacing: -25px;
+  color: #000;
+}
+.error span {
+  display: inline-block;
+  transform: rotate(-10deg);
+  color: #EBAE13;
+}
+.error .button {
+  width: 200px;
+  height: 50px;
+  border: 3px solid #EBAE13;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.error .desc {
+  color: #666;
+}
+.movie_section {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  padding: 0 20px;
+}
+
+.footer {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.footer span {
+  line-height: 150px;
+  opacity: .6;
+}
+
+.footer p {
+  font-size: 14px;
+  opacity: .4;
+}
+
+.detail_box {
+  margin: 50px 0;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.img_box img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 10px;
+}
+
+.content_box {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+}
+.title_box .title {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+.title_box .average {
+  display: inline-block;
+  font-weight: bold;
+  background-color: #EBAE13;
+  padding: 0 5px;
+  margin-top: 20px;
+}
+
+.overview {
+  font-size: 14px;
+  max-width: 300px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 820px ) {
+.header-left-wrap a {width:80%;} 
+}
+
+@media screen and (max-width: 700px ) {
+  .page-container {
+    padding: 0px 20px;
+  }
+
+  .header-left-wrap ul {
+    display: none;
+  }
+  .header-right-wrap {
+    align-items: center;
+    gap: 20px;
+    display: block;
+  }
+
+  .header-right-wrap ul {
+    /* display: none; */
+    position: fixed;
+    right: -100%;
+    top: 30px;
+    transition: all .5s;
+  }
+  .header-right-wrap ul.active {
+    right: 20px;
+  }
+
+  .header-right-wrap ul li {
+    margin-bottom: 5px;
+  }
+
+  .header-wrap {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .title_box .title {
+    font-size: 16px;
+  }
+
+  .overview {
+    font-size: 12px;
+  }
+
+  .error .not {
+    font-size: 28px;
+  }
+  .error .number {
+    font-size: 150px;
+  }
+  .error .button {
+    width: 200px;
+    height: 50px;
+    border: 3px solid #EBAE13;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+  .error .desc {
+    font-size: 12px;
+  }
+
+  .movies-container {
+    row-gap: 30px;
+  }
+
+  .overview {
+    margin-top: 20px;
+  }
+}
