@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home'
+import Movies from "./pages/Movies";
+import TopMovies from "./pages/TopMovies";
+import NotFound from "./pages/NotFound";
+import Header from "./components/Header";
+import MovieDetail from "./pages/MovieDetail";
+import Upcoming from "./pages/Upcoming";
+import Footer from "./components/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="root-wrap">
+     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Header/>
+     <Routes>
+      <Route path="/" exact={true} element={<Home/>}/>
+      <Route path="movie_now" element={<Movies/>}/>
+ <Route path="/movie/:title" element={<MovieDetail/>}/>     
+ <Route path="movie_top" element={<TopMovies/>}/>
+ <Route path="/movie/:title" element={<MovieDetail/>}/>
+ <Route path="upcoming" element={<Upcoming/>}/>
+<Route path="/upcoming/:title" element={<MovieDetail/>}/>
+   <Route path="*" element={<NotFound/>}/>    
+     </Routes>
+      <Footer/>
+     </BrowserRouter>
     </div>
   );
 }
