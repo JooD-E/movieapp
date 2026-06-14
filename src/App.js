@@ -10,7 +10,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="root-wrap">
-     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
+     {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       <Header/>
      <Routes>
       <Route path="/" exact={true} element={<Home/>}/>
