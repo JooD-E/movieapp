@@ -112,7 +112,7 @@ export default function Home() {
             </div>
           </div>
           <button className="booking-submit-btn" onClick={handleBookingSubmit}>
-            인원/좌석 선택하러 가기 →
+            터치해서 빠른 예매하기 →
           </button>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function Home() {
       <div className="random-pick-banner" onClick={handleRandomPick}>
         <div className="random-text">
           <p className="random-sub">선택 장애가 왔다면?</p>
-          <h3 className="random-title">🤔 오늘 뭐 보지? 클릭해서 랜덤 뽑기 →</h3>
+          <h3 className="random-title">🤔 오늘 뭐 보지? 터치해서 랜덤 뽑기 →</h3>
         </div>
         <div className="random-icon">🎰</div>
       </div>
